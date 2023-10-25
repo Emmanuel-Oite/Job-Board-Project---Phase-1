@@ -89,7 +89,7 @@ h2 {
 }
 
 #job-list li:hover {
-  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  transform: scale(1.02); /* Slight zoom-in effect on hover */
 }
 
 #job-list h3 {
