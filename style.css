@@ -2,8 +2,10 @@ body, h1, h2, p, ul, li, input {
   margin: 0;
   padding: 0;
 }
-
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 /* Set a background color and font for the entire page */
 body {
   background-color: #f4f4f4;
@@ -244,6 +246,8 @@ input[type="text"]:focus {
 }
 iframe {
   width: 100%;
+  border-radius: 10px;
+  border: #007BFF;
 }
 /* Style the footer with a background color and center-align text */
 footer {
