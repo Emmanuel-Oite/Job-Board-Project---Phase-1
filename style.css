@@ -12,8 +12,9 @@ body {
 
 /* Style the header with a background color and center-align text */
 header {
-  background-color: #fff;
-  color: #0056b3;
+  background-image: url(assets/Images/BackGroundImage2.jpg);
+  background-size: cover;
+  color: #007bf0;
   text-align: center;
   padding: 20px;
 }
@@ -218,7 +219,8 @@ input[type="text"]:focus {
 }
 /* Style the "Contact Us" section */
 #contact {
-  background-color: #f9f9f9;
+  background-image: url(assets/Images/BackGroundImage2.jpg);
+  background-size: cover;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -237,8 +239,8 @@ input[type="text"]:focus {
 }
 /* Style the footer with a background color and center-align text */
 footer {
-  background-color: #007BFF;
-  color: #fff;
+  background-color: #fff;
+  color: #007BFF;
   text-align: center;
   padding: 10px;
 }
