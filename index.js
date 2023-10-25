@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Initial load of all job listings
             updateJobListings();
+            
         })
         .catch((error) => {
             console.error("Error fetching JSON data: " + error);

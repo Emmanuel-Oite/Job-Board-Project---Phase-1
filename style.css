@@ -7,7 +7,7 @@ body, h1, h2, p, ul, li, input {
 /* Set a background color and font for the entire page */
 body {
   background-color: #f4f4f4;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Style the header with a background color and center-align text */
@@ -17,18 +17,23 @@ header {
   color: #007bf0;
   text-align: center;
   padding: 20px;
+  font-family: Montserrat;
 }
 
 /* Style the logo */
 header img {
-  width: 50px; /* Adjust the width as needed */
-  height: auto; /* Automatically scale the height */
-  margin-right: 10px; /* Add some spacing between the logo and text */
+  width: 50px; 
+  height: auto; 
+  margin-right: 10px;
 }
 /* Style the navigation menu with horizontal list items */
+nav {
+  font-family: Montserrat;
+  font-weight: bold;
+}
 nav ul {
   list-style: none;
-  margin-top: 20px; /* Increased distance between header and navigation */
+  margin-top: 20px;
 }
 
 nav li {
@@ -61,7 +66,7 @@ section {
   background-color: #fff;
   padding: 20px;
   margin: 20px;
-  border-radius: 10px; /* Rounded edges */
+  border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a cleaner look */
 }
 
@@ -71,7 +76,7 @@ h2 {
 }
 #job-list {
   list-style: none;
-  gap: 30px; /* Increased spacing between listings */
+  gap: 30px; 
 }
 #job-list li {
   font-family: 'Poppins', sans-serif;
@@ -95,14 +100,14 @@ h2 {
 
 #job-list h3 {
   color: #007BFF;
-  font-size: 1.2em; /* Font size for job titles */
-  font-weight: bold; /* Make the title more distinct */
+  font-size: 1.2em; 
+  font-weight: bold; 
   margin-bottom: 10px;
 }
 
 .job-description {
-  font-size: 0.9em; /* Font size for job descriptions */
-  margin-top: 10px; /* Space between title and description */
+  font-size: 0.9em; 
+  margin-top: 10px; 
 }
 
 .apply-button {
@@ -115,17 +120,17 @@ h2 {
   transition: background-color 0.3s; /* Smooth background color transition */
   position: absolute;
   top: 10px;
-  right: 10px; /* Position at the top right */
+  right: 10px; 
 }
 
 .apply-button:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: #0056b3; 
 }
 
 /* Style the filtering input fields */
 .input-container {
   display: flex;
-  margin: 20px 0; /* Increased space between filters and listings */
+  margin: 20px 0; 
 }
 
 input[type="text"] {
@@ -162,7 +167,7 @@ input[type="text"]:focus {
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Style the "Post Job" button */
@@ -236,6 +241,9 @@ input[type="text"]:focus {
 
 #contact li {
   margin-bottom: 10px;
+}
+iframe {
+  width: 100%;
 }
 /* Style the footer with a background color and center-align text */
 footer {
