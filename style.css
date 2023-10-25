@@ -164,7 +164,7 @@ input[type="text"]:focus {
 #job-post-form input[type="text"],
 #job-post-form textarea,
 #job-post-form input[type="url"] {
-  width: 100%;
+  width: 97%;
   padding: 10px;
   margin: 5px 0;
   border: 1px solid #ccc;
@@ -206,24 +206,7 @@ input[type="text"]:focus {
   margin: 20px 0;
 }
 
-/* Style the "Apply" button in job listings */
-.apply-button {
-  display: block;
-  background-color: #007BFF;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px;
-}
 
-.apply-button:hover {
-  background-color: #0056b3;
-}
 /* Style the "Contact Us" section */
 #contact {
   background-image: url(assets/Images/BackGroundImage2.jpg);
