@@ -216,6 +216,25 @@ input[type="text"]:focus {
 .apply-button:hover {
   background-color: #0056b3;
 }
+/* Style the "Contact Us" section */
+#contact {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-family: poppins;
+}
+
+/* Style the contact information */
+#contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+#contact li {
+  margin-bottom: 10px;
+}
 /* Style the footer with a background color and center-align text */
 footer {
   background-color: #007BFF;
