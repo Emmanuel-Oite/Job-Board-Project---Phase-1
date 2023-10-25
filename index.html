@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Job Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="assets/Images/Logo 2.jpg" alt="Site Logo">
+        <h1>Welcome to the Programming Job Board</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#job-listings">Job Listings</a></li>
+                <li><a href="#post-job">Post a Job</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="job-listings">
+        <h2>Latest Job Listings</h2>
+        <div class="filter-container">
+            <input type="text" id="keyword-filter" placeholder="Filter by keyword">
+            <input type="text" id="location-filter" placeholder="Filter by location">
+        </div>
+        <ul id="job-list">
+            <!-- Job listings will be populated here using JavaScript -->
+        </ul>
+    </section>
+
+    <section id="post-job">
+        <h2>Post a Job</h2>
+        <form id="job-post-form">
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job-title" required>
+
+            <label for="company-name">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" required>
+
+            <label for="job-location">Location:</label>
+            <input type="text" id="job-location" name="job-location" required>
+
+            <label for="job-description">Job Description:</label>
+            <textarea id="job-description" name="job-description" rows="4" required></textarea>
+
+            <label for="job-requirements">Job Requirements:</label>
+            <textarea id="job-requirements" name="job-requirements" rows="4" required></textarea>
+
+            <label for="job-salary">Salary:</label>
+            <input type="text" id="job-salary" name="job-salary">
+
+            <label for="job-apply-link">Apply Link:</label>
+            <input type="url" id="job-apply-link" name="job-apply-link">
+
+            <button type="submit">Post Job</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Programming Job Board</p>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
