@@ -1,18 +1,15 @@
-body, h1, h2, p, ul, li, input {
+body {
   margin: 0;
   padding: 0;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-/* Set a background color and font for the entire page */
-body {
   background-color: #f4f4f4;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Style the header with a background color and center-align text */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   background-image: url(assets/Images/BackGroundImage2.jpg);
   background-size: cover;
@@ -22,17 +19,17 @@ header {
   font-family: Montserrat;
 }
 
-/* Style the logo */
 header img {
-  width: 50px; 
-  height: auto; 
+  width: 50px;
+  height: auto;
   margin-right: 10px;
 }
-/* Style the navigation menu with horizontal list items */
+
 nav {
   font-family: Montserrat;
   font-weight: bold;
 }
+
 nav ul {
   list-style: none;
   margin-top: 20px;
@@ -46,70 +43,56 @@ nav li {
 nav a {
   text-decoration: none;
   color: #007BFF;
-  position: relative; /* Add relative positioning for underlines */
-  transition: border-bottom 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Smoother transitions */
+  position: relative;
+  transition: border-bottom 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
-  /* Underline effect on hover */
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
 }
 
 nav a:hover {
-  border-bottom: 2px solid #0056b3; /* Add an underline on hover */
+  border-bottom: 2px solid #0056b3;
   padding-bottom: 0;
 }
 
 nav a:active {
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect on click */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
-/* Style the main content sections with padding and a light background */
 section {
   background-color: #fff;
   padding: 20px;
   margin: 20px;
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a cleaner look */
-}
-
-/* Style the job listings within the section */
-h2 {
-  color: #007BFF;
-}
-#job-list {
-  list-style: none;
-  gap: 30px; 
-}
-#job-list li {
-  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #job-list li {
   border: 1px solid #ccc;
   padding: 20px;
-  border-radius: 10px; /* Rounded edges for listings */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for individual listings */
-  transition: transform 0.2s ease-in-out; /* Add transformation effect on hover */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: flex-start; /* Align elements to the start of the block */
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
 }
 
 #job-list li:hover {
-  transform: scale(1.02); /* Slight zoom-in effect on hover */
+  transform: scale(1.02);
 }
 
 #job-list h3 {
   color: #007BFF;
-  font-size: 1.2em; 
-  font-weight: bold; 
+  font-size: 1.2em;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
 .job-description {
-  font-size: 0.9em; 
-  margin-top: 10px; 
+  font-size: 0.9em;
+  margin-top: 10px;
 }
 
 .apply-button {
@@ -119,20 +102,19 @@ h2 {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Smooth background color transition */
+  transition: background-color 0.3s;
   position: absolute;
   top: 10px;
-  right: 10px; 
+  right: 10px;
 }
 
 .apply-button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }
 
-/* Style the filtering input fields */
 .input-container {
   display: flex;
-  margin: 20px 0; 
+  margin: 20px 0;
 }
 
 input[type="text"] {
@@ -142,10 +124,11 @@ input[type="text"] {
   border-radius: 5px;
   transition: border-color 0.3s;
 }
+
 input[type="text"]:focus {
   border-color: #007BFF;
 }
-/* Add styling for the "Post a Job" section */
+
 #post-job {
   background-color: #f0f0f0;
   padding: 20px;
@@ -154,7 +137,6 @@ input[type="text"]:focus {
   margin: 20px 0;
 }
 
-/* Style the form inputs and labels */
 #job-post-form label {
   display: block;
   margin-top: 10px;
@@ -172,7 +154,6 @@ input[type="text"]:focus {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Style the "Post Job" button */
 #job-post-form button {
   background-color: #007BFF;
   color: #fff;
@@ -181,14 +162,13 @@ input[type="text"]:focus {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-family: poppins, monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 #job-post-form button:hover {
   background-color: #0056b3;
 }
 
-/* Style the job listings */
 #job-list li {
   background-color: #fff;
   padding: 10px;
@@ -197,7 +177,6 @@ input[type="text"]:focus {
   margin: 10px 0;
 }
 
-/* Additional styling for the "Latest Job Listings" section */
 #job-listings {
   background-color: #f9f9f9;
   padding: 20px;
@@ -206,8 +185,6 @@ input[type="text"]:focus {
   margin: 20px 0;
 }
 
-
-/* Style the "Contact Us" section */
 #contact {
   background-image: url(assets/Images/BackGroundImage2.jpg);
   background-size: cover;
@@ -215,10 +192,9 @@ input[type="text"]:focus {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 20px 0;
-  font-family: poppins;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Style the contact information */
 #contact ul {
   list-style: none;
   padding: 0;
@@ -227,12 +203,13 @@ input[type="text"]:focus {
 #contact li {
   margin-bottom: 10px;
 }
+
 iframe {
   width: 100%;
   border-radius: 10px;
-  border: #007BFF;
+  border: 1px solid #007BFF;
 }
-/* Style the footer with a background color and center-align text */
+
 footer {
   background-color: #fff;
   color: #007BFF;
