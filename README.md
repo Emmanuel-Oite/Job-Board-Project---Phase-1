@@ -5,7 +5,7 @@ Simple job board project for my phase one final project
 
 DevJobHub is a job listings website that provides you with the latest  job opportunities. You can search for jobs, post job listings, and apply for positions directly from our platform.
 
-![DevJobHub Screenshot](assets/Images/Screenshot 2.jpg)
+![DevJobHub Screenshot](assets/Images/Screenshot2.jpg)
 
 ## Features
 - Display avaliable job listings using the Adzuna API
