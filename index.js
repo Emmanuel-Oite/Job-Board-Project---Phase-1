@@ -3,90 +3,84 @@ document.addEventListener("DOMContentLoaded", function () {
     const keywordFilter = document.getElementById("keyword-filter");
     const locationFilter = document.getElementById("location-filter");
     const jobPostForm = document.getElementById("job-post-form");
+    
+    // Add your Adzuna App ID and App Key here
+    const appId = "e5acc4cf";
+    const appKey = "e6ee53034bfc93e2be62c2b03207424f";
 
-    // Fetch the JSON data from the separate file
-    fetch("jobListings.json")
-        .then((response) => response.json())
-        .then((data) => {
-            let filteredJobs = data.jobListings;
+    // Function to fetch job listings from the Adzuna API
+    function fetchJobListings(keyword, location) {
+        const apiUrl = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${appId}&app_key=${appKey}&what=${keyword}&where=${location}`;
 
-            // Function to update the displayed job listings
-            function updateJobListings() {
-                jobList.innerHTML = ''; // Clear the existing listings
+        fetch(apiUrl)
+            .then((response) => response.json())
+            .then((data) => {
+                let jobListings = data.results;
 
-                filteredJobs.forEach((job) => {
+                // Update the displayed job listings
+                jobList.innerHTML = '';
+
+                jobListings.forEach((job) => {
                     const listItem = document.createElement("li");
                     listItem.innerHTML = `
                         <h3>${job.title}</h3>
-                        <p><strong>Company:</strong> ${job.company}</p>
-                        <p><strong>Location:</strong> ${job.location}</p>
+                        <p><strong>Company:</strong> ${job.company.display_name}</p>
+                        <p><strong>Location:</strong> ${job.location.display_name}</p>
                         <p><strong>Description:</strong> ${job.description}</p>
-                        <p><strong>Requirements:</strong> ${job.requirements}</p>
-                        <p><strong>Salary:</strong> ${job.salary}</p>
-                        <a class="apply-button" href="${job.applyLink}" target="_blank">Apply</a>
+                        <p><strong>Requirements:</strong> ${job.description}</p>
+                        <p><strong>Salary:</strong> ${job.salary_min} - ${job.salary_max} ${job.salary_is_predicted ? "(predicted)" : ""}</p>
+                        <a class="apply-button" href="${job.redirect_url}" target="_blank">Apply</a>
                     `;
                     jobList.appendChild(listItem);
                 });
-            }
-
-            // Event listener for keyword filter input
-            keywordFilter.addEventListener("input", function () {
-                const keyword = keywordFilter.value.toLowerCase();
-
-                // Filter job listings by keyword
-                filteredJobs = data.jobListings.filter((job) => {
-                    return job.title.toLowerCase().includes(keyword) ||
-                        job.description.toLowerCase().includes(keyword);
-                });
-
-                updateJobListings();
+            })
+            .catch((error) => {
+                console.error("Error fetching job listings from Adzuna API: " + error);
             });
+    }
 
-            // Event listener for location filter input
-            locationFilter.addEventListener("input", function () {
-                const location = locationFilter.value.toLowerCase();
+    // Function to update the displayed job listings
+    function updateJobListings() {
+        const keyword = keywordFilter.value.toLowerCase();
+        const location = locationFilter.value.toLowerCase();
 
-                // Filter job listings by location
-                filteredJobs = data.jobListings.filter((job) => {
-                    return job.location.toLowerCase().includes(location);
-                });
+        fetchJobListings(keyword, location);
+    }
 
-                updateJobListings();
-            });
+    // Event listener for keyword filter input
+    keywordFilter.addEventListener("input", updateJobListings);
 
-            // Event listener for job posting form submission
-            jobPostForm.addEventListener("submit", function (event) {
-                event.preventDefault(); // Prevent the default form submission
+    // Event listener for location filter input
+    locationFilter.addEventListener("input", updateJobListings);
 
-                // Get the form data
-                const formData = new FormData(jobPostForm);
+    // Event listener for job posting form submission
+    jobPostForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
 
-                // Create a new job listing
-                const newJob = {
-                    title: formData.get("job-title"),
-                    company: formData.get("company-name"),
-                    location: formData.get("job-location"),
-                    description: formData.get("job-description"),
-                    requirements: formData.get("job-requirements"),
-                    salary: formData.get("job-salary"),
-                    applyLink: formData.get("job-apply-link"),
-                };
+        // Get the form data
+        const formData = new FormData(jobPostForm);
 
-                // Add the new job to the list of job listings
-                data.jobListings.push(newJob);
+        // Create a new job listing
+        const newJob = {
+            title: formData.get("job-title"),
+            company: formData.get("company-name"),
+            location: formData.get("job-location"),
+            description: formData.get("job-description"),
+            requirements: formData.get("job-requirements"),
+            salary: formData.get("job-salary"),
+            applyLink: formData.get("job-apply-link"),
+        };
 
-                // Clear the form
-                jobPostForm.reset();
+        // Add the new job to the list of job listings
+        data.jobListings.push(newJob);
 
-                // Update the displayed job listings
-                updateJobListings();
-            });
+        // Clear the form
+        jobPostForm.reset();
 
-            // Initial load of all job listings
-            updateJobListings();
-            
-        })
-        .catch((error) => {
-            console.error("Error fetching JSON data: " + error);
-        });
+        // Update the displayed job listings
+        updateJobListings();
+    });
+
+    // Initial load of job listings
+    updateJobListings();
 });
