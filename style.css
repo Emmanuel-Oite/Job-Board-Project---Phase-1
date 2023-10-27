@@ -4,12 +4,12 @@ body {
   background-color: #f4f4f4;
   font-family: 'Montserrat', sans-serif;
 }
-
+/* Styling images to be responsive and not overflow their containers */
 img {
   max-width: 100%;
   height: auto;
 }
-
+/* Styling the header section, including background image and text color */
 header {
   background-image: url(assets/Images/BackGroundImage2.jpg);
   background-size: cover;
@@ -18,13 +18,13 @@ header {
   padding: 20px;
   font-family: Montserrat;
 }
-
+/* Styling the site logo image within the header */
 header img {
   width: 50px;
   height: auto;
   margin-right: 10px;
 }
-
+/* Styling the navigation menu */
 nav {
   font-family: Montserrat;
   font-weight: bold;
@@ -58,7 +58,7 @@ nav a:hover {
 nav a:active {
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
-
+/* Styling all sections on the page */
 section {
   background-color: #fff;
   padding: 20px;
@@ -66,7 +66,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+/* Styling individual job listings in the Job Listings section */
 #job-list li {
   border: 1px solid #ccc;
   padding: 20px;
@@ -80,7 +80,7 @@ section {
 }
 
 #job-list li:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 #job-list h3 {
@@ -94,7 +94,7 @@ section {
   font-size: 0.9em;
   margin-top: 10px;
 }
-
+/* Styling the Apply button within job listings */
 .apply-button {
   background-color: #007BFF;
   color: #fff;
@@ -111,7 +111,7 @@ section {
 .apply-button:hover {
   background-color: #0056b3;
 }
-
+/* Styling input containers, including text inputs */
 .input-container {
   display: flex;
   margin: 20px 0;
@@ -142,7 +142,7 @@ input[type="text"]:focus {
   margin-top: 10px;
   font-weight: bold;
 }
-
+/* Styling input fields, including text inputs, textareas, and URL inputs */
 #job-post-form input[type="text"],
 #job-post-form textarea,
 #job-post-form input[type="url"] {
@@ -169,22 +169,59 @@ input[type="text"]:focus {
   background-color: #0056b3;
 }
 
-#job-list li {
+/* Styling the "My Job Postings" section */
+#my-posted-jobs {
+  background-color: #f9f9f9; 
+  padding: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin: 20px 0; 
+}
+
+/* Styling individual job listings in the "My Job Postings" section */
+#my-job-list li {
   background-color: #fff;
-  padding: 10px;
+  padding: 10px; 
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 10px 0;
+  border-radius: 5px; 
+  margin: 10px 0; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  position: relative; 
 }
 
-#job-listings {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 20px 0;
+#my-job-list li:hover {
+  transform: scale(1.02); /* Slightly scale listings on hover */
 }
 
+#my-job-list h3 {
+  color: #007BFF; 
+  font-size: 1.2em; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
+}
+
+/* Styling the "Apply" button within job listings in "My Job Postings" */
+#my-job-list .apply-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  position: absolute; 
+  top: 10px;
+  right: 10px; 
+}
+
+#my-job-list .apply-button:hover {
+  background-color: #0056b3;
+}
+/* Style the contact section */
 #contact {
   background-image: url(assets/Images/BackGroundImage2.jpg);
   background-size: cover;
@@ -203,13 +240,13 @@ input[type="text"]:focus {
 #contact li {
   margin-bottom: 10px;
 }
-
+/* Style the map iframe within the contact section */
 iframe {
   width: 100%;
   border-radius: 10px;
   border: 1px solid #007BFF;
 }
-
+/* Style the footer section */
 footer {
   background-color: #fff;
   color: #007BFF;

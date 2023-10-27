@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const locationFilter = document.getElementById("location-filter");
     const jobPostForm = document.getElementById("job-post-form");
     
+    // Create an array to store posted jobs
+    const postedJobs = [];
+
     // Adzuna App ID and App Key 
     const appId = "e5acc4cf";
     const appKey = "e6ee53034bfc93e2be62c2b03207424f";
@@ -71,16 +74,20 @@ document.addEventListener("DOMContentLoaded", function () {
             applyLink: formData.get("job-apply-link"),
         };
 
-        // Add the new job to the list of job listings
-        data.jobListings.push(newJob);
+        // Add the new job to the list of posted jobs
+        postedJobs.push(newJob);
 
         // Clear the form
         jobPostForm.reset();
 
         // Update the displayed job listings
         updateJobListings();
+
+        // Display posted jobs
+        displayPostedJobs();
     });
 
     // Initial load of job listings
     updateJobListings();
+    
 });
