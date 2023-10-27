@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const locationFilter = document.getElementById("location-filter");
     const jobPostForm = document.getElementById("job-post-form");
     
-    // Add your Adzuna App ID and App Key here
+    // Adzuna App ID and App Key 
     const appId = "e5acc4cf";
     const appKey = "e6ee53034bfc93e2be62c2b03207424f";
 
