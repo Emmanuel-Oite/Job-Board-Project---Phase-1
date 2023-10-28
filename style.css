@@ -253,3 +253,67 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
+
+/* Media queries for mobile devices 768px and below*/
+@media (max-width: 768px) {
+  header {
+      text-align: center;
+      padding: 10px; /* Reduce the header padding */
+  }
+
+  header img {
+      width: 40px; /* Decrease the logo size */
+      margin-right: 5px; /* Reduce the margin for the logo */
+  }
+
+  nav ul {
+      margin-top: 10px;
+  }
+
+  nav li {
+      margin-right: 10px;
+  }
+
+  /* Adjust the font size and padding for nav links */
+  nav a {
+      font-size: 16px;
+      padding: 10px 5px;
+  }
+
+  section {
+      padding: 10px; /* Reduce section padding */
+  }
+
+  #job-list li {
+      padding: 10px;
+      margin: 10px 0;
+  }
+
+  /* Decrease font size for job titles */
+  #job-list h3 {
+      font-size: 1.1em;
+  }
+
+  .job-description {
+      font-size: 0.8em; /* Reduce font size for job descriptions */
+  }
+
+  .apply-button {
+      font-size: 14px; /* Decrease font size for the Apply button */
+      padding: 5px 10px; /* Adjust button padding */
+      top: 5px;
+      right: 5px;
+  }
+
+  #post-job {
+      padding: 10px;
+      margin: 10px 0;
+  }
+
+  #job-post-form input[type="text"],
+  #job-post-form textarea,
+  #job-post-form input[type="url"] {
+      width: 100%; /* Make the form inputs full-width */
+  }
+}
