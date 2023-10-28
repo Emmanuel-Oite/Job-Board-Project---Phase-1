@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const jobList = document.getElementById("job-list");
+    const myJobList = document.getElementById("my-job-list");
     const keywordFilter = document.getElementById("keyword-filter");
     const locationFilter = document.getElementById("location-filter");
     const jobPostForm = document.getElementById("job-post-form");
@@ -83,8 +84,21 @@ document.addEventListener("DOMContentLoaded", function () {
         // Update the displayed job listings
         updateJobListings();
 
-        // Display posted jobs
-        displayPostedJobs();
+        // Clear and re-populate the "My Posted Jobs" section
+        myJobList.innerHTML = '';
+        postedJobs.forEach((job) => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `
+                <h3>${job.title}</h3>
+                <p><strong>Company:</strong> ${job.company}</p>
+                <p><strong>Location:</strong> ${job.location}</p>
+                <p><strong>Description:</strong> ${job.description}</p>
+                <p><strong>Requirements:</strong> ${job.requirements}</p>
+                <p><strong>Salary:</strong> ${job.salary}</p>
+                <a class="apply-button" href="${job.applyLink}" target="_blank">Apply</a>
+            `;
+            myJobList.appendChild(listItem);
+        });
     });
 
     // Initial load of job listings
