@@ -3,6 +3,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   font-family: 'Montserrat', sans-serif;
+  transition: all 0.5s;
 }
 /* Styling images to be responsive and not overflow their containers */
 img {
@@ -300,7 +301,7 @@ footer {
   }
 
   .apply-button {
-      font-size: 14px; /* Decrease font size for the Apply button */
+      font-size: 12px; /* Decrease font size for the Apply button */
       padding: 5px 10px; /* Adjust button padding */
       top: 5px;
       right: 5px;
@@ -316,4 +317,36 @@ footer {
   #job-post-form input[type="url"] {
       width: 100%; /* Make the form inputs full-width */
   }
+}
+/* Scroll Animation for Job Listings */
+#job-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+#job-list li.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+#job-list li {
+  animation: fadeIn 1s forwards;
+}
+
+#job-list li:after {
+  content: '';
+  display: block;
+  height: 50px;
 }
