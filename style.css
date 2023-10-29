@@ -5,6 +5,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   transition: all 0.5s;
 }
+/*Styling to html adding smooth scrolling*/
+html{
+  scroll-behavior: smooth;
+}
 /* Styling images to be responsive and not overflow their containers */
 img {
   max-width: 100%;
