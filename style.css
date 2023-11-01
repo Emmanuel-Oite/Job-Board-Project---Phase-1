@@ -70,8 +70,14 @@ section {
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-right: 30px;
 }
 /* Styling individual job listings in the Job Listings section */
+#job-list {
+  display: flex;
+  flex-direction: column; /* Display job listings vertically */
+  align-items: center; /* Center the job listings horizontally */
+}
 #job-list li {
   border: 1px solid #ccc;
   padding: 20px;
@@ -82,10 +88,13 @@ section {
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: -25px;
 }
 
 #job-list li:hover {
-  transform: scale(1.01);
+  transform: scale(1.03);
 }
 
 #job-list h3 {
@@ -139,7 +148,7 @@ input[type="text"]:focus {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 20px 0;
+  margin: 20px 20px;
 }
 
 #job-post-form label {
@@ -180,7 +189,7 @@ input[type="text"]:focus {
   padding: 20px; 
   border: 1px solid #ccc; 
   border-radius: 5px; 
-  margin: 20px 0; 
+  margin: 20px 20px; 
 }
 
 /* Styling individual job listings in the "My Job Postings" section */
