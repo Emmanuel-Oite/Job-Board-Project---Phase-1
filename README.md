@@ -1,11 +1,11 @@
 # Job-Board-Project---Phase-1
 Simple job board project for my phase one final project
 
-# DevJobHub - Job Listings Website
+# OnlyJobs - Job Listings Website
 
-DevJobHub is a job listings website that provides you with the latest  job opportunities. You can search for jobs, post job listings, and apply for positions directly from our platform.
+OnlyJobs is a job listings website that provides you with the latest  job opportunities. You can search for jobs, post job listings, and apply for positions directly from our platform.
 
-![DevJobHub Screenshot](assets/Images/Screenshot2.jpg)
+![OnlyJobs Screenshot](assets/Images/readme Screenshot.png)
 
 ## Features
 - Display avaliable job listings using the Adzuna API
@@ -26,7 +26,7 @@ DevJobHub is a job listings website that provides you with the latest  job oppor
 ## How to Use
 
 1. Clone this repository to your local machine.
-2. Open the `index.html` file in your web browser to access the DevJobHub website.
+2. Open the `index.html` file in your web browser to access the OnlyJobs website.
 3. Browse job listings, apply filters, and explore job opportunities.
 
 ## Contributions
