@@ -5,7 +5,7 @@ Simple job board project for my phase one final project
 
 OnlyJobs is a job listings website that provides you with the latest  job opportunities. You can search for jobs, post job listings, and apply for positions directly from our platform.
 
-![OnlyJobs Screenshot](assets/Images/readme Screenshot.png)
+![OnlyJobs Screenshot](./assets/Images/readme%20Screenshot.png)
 
 ## Features
 - Display avaliable job listings using the Adzuna API
